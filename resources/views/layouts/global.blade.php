@@ -35,7 +35,7 @@
 </head> 
 <body>
  <nav class="navbar navbar-expand p-0">
- <a class="navbar-brand text-center col-xs-12 col-md-3 col-lg-2 mr-0" href="{{route('home')}}">    Larashop 
+ <a class="navbar-brand text-center col-xs-12 col-md-3 col-lg-2 mr-0" href="{{route('home')}}">    Superhero
  </a>
 
  <button class="btn btn-link d-block d-md-none" data-toggle="collapse" data-target="#sidebar-nav" role="button">
