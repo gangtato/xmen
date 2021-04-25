@@ -78,6 +78,10 @@
    Simulasi Perjodohan
    </a>
  </li>
+ <li><a href="/skill_index"><span class="oi oi-home"></span>
+        Data Skill
+     </a>
+ </li>
  
  <div class="d-block d-md-none">
  <div class="dropdown-divider"></div>

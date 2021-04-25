@@ -5,6 +5,6 @@
 @csrf
 <label>Skill</label>
 <input type="text" name="skill">
-<input type="submit" value="submit">
+<input type="submit" value="submit" class="btn btn-success">
 </form>
 @endsection

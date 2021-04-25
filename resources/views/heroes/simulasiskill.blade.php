@@ -8,32 +8,39 @@
         <form action="{{ route('nikah') }}" method="Post" class="form-control">
         @csrf
         <h3>Simulasi Jika Superhero Menikah</h3>
-        <button class="btn btn-danger float-right">Hapus</button>
-        <button type="submit" class="btn btn-primary float-right">Edit</button>
-        
+        <button type="submit" class="btn btn-danger float-right" name="action" value="hapus">Hapus</button>
+        <button type="submit" class="btn btn-primary float-right" name="action" value="edit">Edit</button>
+        <button type="submit" class="btn btn-success float-left" name="action" value="exportexcel">Export Excel</button>
+        <button type="submit" class="btn btn-warning float-left" name="action" value="exportpdf">Export PDF</button>
+        @isset($datas)
         <table width="100%" border="1">
             <tr>
+            
                 <td width="20%">Suami</td>
                 <td><select class="form-control" name="jenis_kelamin_laki_laki">
                 @foreach($datas as $i => $data)
                     @if($data->jenis_kelamin == 'laki-laki')
-                    <option value="{{ $data->id }}" {{($data->id == $data_suami ? 'selected': '')}}>{{ $data->nama_super_hero }}</option>
-                    @endif
+                    <option value="{{ $data->id }}" @isset($data_suami) {{($data->id == $data_suami ? 'selected': '')}} @endisset>{{ $data->nama_super_hero }}</option>
+                    @endisset   
                 @endforeach
                     </select>
                 </td>
+           
             </tr>
             <tr>
+           
                 <td width="20%">Istri</td>
                 <td><select class="form-control" name="jenis_kelamin_perempuan">
                 @foreach($datas as $data)
-                    @if($data->jenis_kelamin == 'Perempuan')
-                    <option value="{{ $data->id }}" {{($data->id == $data_istri ? 'selected': '')}}>{{ $data->nama_super_hero }}</option>
+                    @if($data->jenis_kelamin == 'Perempuan') 
+                    <option value="{{ $data->id }}" @isset($istri) {{($data->id == $data_istri ? 'selected': '')}} @endisset>{{ $data->nama_super_hero }}</option>
                     @endif
                 @endforeach
                 </select></td>
+           
             </tr>
         </table>
+        @endisset
         </form>
     </div>
     <div class="row">

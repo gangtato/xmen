@@ -37,8 +37,15 @@
                  <td>{{ $data->id }}</td>
                  <td>{{ $data->nama_super_hero }}</td>
                  <td>{{ $data->jenis_kelamin }}</td>
-                 <td><a href="{{route('heroes.show', [$data->id])}}" class="btn btn-primary">View Detail</a>
-                 <a href="" class="btn btn-danger">Hapus</a></td>
+                 <td><a href="{{route('heroes.show', [$data->id]) }}" class="btn btn-primary">View Detail</a>
+                 <form onsubmit="return confirm('Delete this user permanently?')" class="d-inline" action="{{route('heroes.destroy2', [$data->id])}}" method="POST">
+                       @csrf
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" value="Hapus" class="btn btn-danger btn-sm">
+                 </form>
+                 
+                 
+                 </td>
               </tr>
               @endforeach
               </table>

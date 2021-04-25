@@ -47,14 +47,14 @@
                  <td>Skill</td>
                  <td><a class="btn btn-primary" href="{{ route('create.skills', [$superheroes->id])}}">Tambah Skill</a></td>
                  </tr>
-                 @foreach($dataskill as $i => $data)
+                 @foreach($dataskill as $index => $data)
                  <tr>
-                   <td>{{ $i += 1 }}</td>
+                   <td>{{ $index += 1 }}</td>
                    <td>{{ $data->skil }}</td>
                    <td><form onsubmit="return confirm('Delete this user permanently?')" class="d-inline" action="{{route('heroes.destroy', [$data->id])}}" method="POST">
                        @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                    <input type="submit" value="Hapus" class="btn btn-danger btn-sm">
                     </form>
                    </td>
                  </tr>
