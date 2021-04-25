@@ -28,3 +28,6 @@ Route::match(["GET", "POST"], "/register", function(){
 Route::get('/home', [App\Http\Controllers\SuperHeroController::class, 'index'])->name('home');
 Route::get('/heroes/skills/{id}', [App\Http\Controllers\SuperHeroController::class, 'skill'])->name('create.skills');
 Route::post('/heroes/skills2/{id}', [App\Http\Controllers\SuperHeroController::class, 'createskill'])->name('create.skills2');
+
+Route::get('/simulasi', [App\Http\Controllers\SuperHeroController::class, 'simulasi'])->name('simulasi');
+Route::post('/simulasi', [App\Http\Controllers\SuperHeroController::class, 'hasilSimulasi'])->name('nikah');

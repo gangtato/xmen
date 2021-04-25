@@ -71,7 +71,13 @@
  <ul class="polished-sidebar-menu ml-0 pt-4 p-0 d-md-block">
  <input class="border-dark form-control d-block d-md-none mb-4" type="text" placeholder="Search" aria-label="Search" />
  <li><a href="/home"><span class="oi oi-home"></span>
-Home</a></li>
+   Home
+   </a>
+ </li>
+ <li><a href="/simulasi"><span class="oi oi-home"></span>
+   Simulasi Perjodohan
+   </a>
+ </li>
  
  <div class="d-block d-md-none">
  <div class="dropdown-divider"></div>
